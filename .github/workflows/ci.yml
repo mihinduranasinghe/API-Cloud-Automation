@@ -36,3 +36,12 @@ jobs:
           passwordTargettedTenant: ${{secrets.PASSWORD}}
           APIProjectName: "SampleStore"
           APIVersion: "1.0.0"
+
+      - name: SampleStore v2.0.0 deploying to production tenant
+        if: github.event_name == 'push' && github.ref == 'refs/heads/prod'
+        uses: mihinduranasinghe/WSO2-APIManager-Cloud-CICD-Beta@v2.0.0
+        with:
+          usernameTargettedTenant: "mihindu@wso2.com@production"
+          passwordTargettedTenant: ${{secrets.PASSWORD}}
+          APIProjectName: "SampleStore"
+          APIVersion: "2.0.0"
