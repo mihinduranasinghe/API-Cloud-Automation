@@ -12,10 +12,10 @@ availableTiers:
 status: published
 visibility: public
 # Mediation Sequence
-# transports: http,https
-# inSequence: in_seq
-# outSequence: out_seq
-# faultSequence: fault_seq
+transports: http,https
+inSequence: in_seq
+outSequence: out_seq
+faultSequence: fault_seq
 tags: []
 # Enabling Documents Adding
 documents: []
